@@ -157,6 +157,9 @@ ADD_SUBDIRECTORY(assets)
 ADD_SUBDIRECTORY(worlds)
 #ADD_SUBDIRECTORY(avonstage)		 
 
+# added by Tetsuya Idota Dec 4, 2017
+ADD_SUBDIRECTORY(path_form)
+
 IF ( BUILD_PLAYER_PLUGIN )
   # Player does not have a CMake package, but does provide pkgconfig info
   include(FindPkgConfig)

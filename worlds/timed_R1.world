@@ -1,0 +1,50 @@
+# footbot.world - modified pioneer_flocking.world
+# Authors: Tetsuya Idota
+
+include "footbot.inc"
+include "map.inc"
+
+speedup 1
+
+interval_sim 100 #100 miliseconds between updates
+
+paused 1
+
+# low resolution gives fast raytracing. set this only as small as you need for your application
+resolution 0.01
+
+# this is very helpful if you have multiple CPU cores
+threads 1
+#threads 2
+#threads 4
+#threads 16
+#threads 64
+
+# configure the GUI window
+window
+(
+  size [ 742.000 730.000 ] # in pixels
+  scale 6.150            
+  center [ -1.233  -1.746 ]
+  rotate [ 0  0 ]
+  show_data 0              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+(    
+  name "env"
+  size [80.000 80.000 1]
+  pose [0 0 0 0]
+  bitmap "bitmaps/empty.png"  
+)
+
+define testbot footbot
+(   
+  color "black"
+  ctrl "footbot_test"
+)
+
+
+testbot( pose [ 0.00 0.00 0.00 97.03 ] )
+

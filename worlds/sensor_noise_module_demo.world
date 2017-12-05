@@ -6,6 +6,7 @@ include "pioneer.inc"
 include "map.inc"
 include "sick.inc"
 
+
 window
 ( 
   size [ 500.000 500.000 ] 
