@@ -1,0 +1,150 @@
+# footbot.world - modified pioneer_flocking.world
+# Authors: Tetsuya Idota
+
+include "footbot.inc"
+include "map.inc"
+
+speedup 1
+
+interval_sim 100 #100 miliseconds between updates
+
+paused 1
+
+# low resolution gives fast raytracing. set this only as small as you need for your application
+resolution 0.01
+
+# this is very helpful if you have multiple CPU cores
+#threads 1
+#threads 2
+#threads 4
+#threads 16
+threads 64
+
+# configure the GUI window
+window
+(
+  size [ 742.000 730.000 ] # in pixels
+  scale 6.150            
+  center [ -1.233  -1.746 ]
+  rotate [ 0  0 ]
+  show_data 0              # 1=on 0=off
+)
+
+# load an environment bitmap
+floorplan
+(    
+  name "env"
+  size [80.000 80.000 1]
+  pose [0 0 0 0]
+  bitmap "bitmaps/empty.png"  
+)
+
+define testbot footbot
+(   
+  color "black"
+  ctrl "footbot_test"
+)
+
+
+testbot( pose [ -39.50 -39.50 0 1 ] )
+testbot( pose [ -30.72 -39.50 0 122 ] )
+testbot( pose [ -21.94 -39.50 0 178 ] )
+testbot( pose [ -13.17 -39.50 0 -5 ] )
+testbot( pose [ -4.39 -39.50 0 -68 ] )
+testbot( pose [ 4.39 -39.50 0 7 ] )
+testbot( pose [ 13.17 -39.50 0 -145 ] )
+testbot( pose [ 21.94 -39.50 0 -143 ] )
+testbot( pose [ 30.72 -39.50 0 -37 ] )
+testbot( pose [ 39.50 -39.50 0 2 ] )
+testbot( pose [ -39.50 -30.72 0 -90 ] )
+testbot( pose [ -30.72 -30.72 0 -97 ] )
+testbot( pose [ -21.94 -30.72 0 -61 ] )
+testbot( pose [ -13.17 -30.72 0 123 ] )
+testbot( pose [ -4.39 -30.72 0 4 ] )
+testbot( pose [ 4.39 -30.72 0 -2 ] )
+testbot( pose [ 13.17 -30.72 0 154 ] )
+testbot( pose [ 21.94 -30.72 0 -44 ] )
+testbot( pose [ 30.72 -30.72 0 -116 ] )
+testbot( pose [ 39.50 -30.72 0 -3 ] )
+testbot( pose [ -39.50 -21.94 0 -101 ] )
+testbot( pose [ -30.72 -21.94 0 -22 ] )
+testbot( pose [ -21.94 -21.94 0 10 ] )
+testbot( pose [ -13.17 -21.94 0 -149 ] )
+testbot( pose [ -4.39 -21.94 0 -58 ] )
+testbot( pose [ 4.39 -21.94 0 -30 ] )
+testbot( pose [ 13.17 -21.94 0 -126 ] )
+testbot( pose [ 21.94 -21.94 0 -173 ] )
+testbot( pose [ 30.72 -21.94 0 77 ] )
+testbot( pose [ 39.50 -21.94 0 172 ] )
+testbot( pose [ -39.50 -13.17 0 -9 ] )
+testbot( pose [ -30.72 -13.17 0 30 ] )
+testbot( pose [ -21.94 -13.17 0 -175 ] )
+testbot( pose [ -13.17 -13.17 0 26 ] )
+testbot( pose [ -4.39 -13.17 0 135 ] )
+testbot( pose [ 4.39 -13.17 0 83 ] )
+testbot( pose [ 13.17 -13.17 0 139 ] )
+testbot( pose [ 21.94 -13.17 0 -68 ] )
+testbot( pose [ 30.72 -13.17 0 98 ] )
+testbot( pose [ 39.50 -13.17 0 -93 ] )
+testbot( pose [ -39.50 -4.39 0 74 ] )
+testbot( pose [ -30.72 -4.39 0 -60 ] )
+testbot( pose [ -21.94 -4.39 0 -87 ] )
+testbot( pose [ -13.17 -4.39 0 127 ] )
+testbot( pose [ -4.39 -4.39 0 31 ] )
+testbot( pose [ 4.39 -4.39 0 -157 ] )
+testbot( pose [ 13.17 -4.39 0 -70 ] )
+testbot( pose [ 21.94 -4.39 0 -49 ] )
+testbot( pose [ 30.72 -4.39 0 -92 ] )
+testbot( pose [ 39.50 -4.39 0 143 ] )
+testbot( pose [ -39.50 4.39 0 -6 ] )
+testbot( pose [ -30.72 4.39 0 87 ] )
+testbot( pose [ -21.94 4.39 0 158 ] )
+testbot( pose [ -13.17 4.39 0 -4 ] )
+testbot( pose [ -4.39 4.39 0 -26 ] )
+testbot( pose [ 4.39 4.39 0 -136 ] )
+testbot( pose [ 13.17 4.39 0 -122 ] )
+testbot( pose [ 21.94 4.39 0 -1 ] )
+testbot( pose [ 30.72 4.39 0 -135 ] )
+testbot( pose [ 39.50 4.39 0 -46 ] )
+testbot( pose [ -39.50 13.17 0 -175 ] )
+testbot( pose [ -30.72 13.17 0 -108 ] )
+testbot( pose [ -21.94 13.17 0 -30 ] )
+testbot( pose [ -13.17 13.17 0 -70 ] )
+testbot( pose [ -4.39 13.17 0 -80 ] )
+testbot( pose [ 4.39 13.17 0 -20 ] )
+testbot( pose [ 13.17 13.17 0 139 ] )
+testbot( pose [ 21.94 13.17 0 4 ] )
+testbot( pose [ 30.72 13.17 0 -49 ] )
+testbot( pose [ 39.50 13.17 0 44 ] )
+testbot( pose [ -39.50 21.94 0 -152 ] )
+testbot( pose [ -30.72 21.94 0 82 ] )
+testbot( pose [ -21.94 21.94 0 10 ] )
+testbot( pose [ -13.17 21.94 0 -53 ] )
+testbot( pose [ -4.39 21.94 0 19 ] )
+testbot( pose [ 4.39 21.94 0 -176 ] )
+testbot( pose [ 13.17 21.94 0 -28 ] )
+testbot( pose [ 21.94 21.94 0 109 ] )
+testbot( pose [ 30.72 21.94 0 111 ] )
+testbot( pose [ 39.50 21.94 0 142 ] )
+testbot( pose [ -39.50 30.72 0 33 ] )
+testbot( pose [ -30.72 30.72 0 -76 ] )
+testbot( pose [ -21.94 30.72 0 86 ] )
+testbot( pose [ -13.17 30.72 0 125 ] )
+testbot( pose [ -4.39 30.72 0 110 ] )
+testbot( pose [ 4.39 30.72 0 -108 ] )
+testbot( pose [ 13.17 30.72 0 79 ] )
+testbot( pose [ 21.94 30.72 0 -10 ] )
+testbot( pose [ 30.72 30.72 0 96 ] )
+testbot( pose [ 39.50 30.72 0 -63 ] )
+testbot( pose [ -39.50 39.50 0 34 ] )
+testbot( pose [ -30.72 39.50 0 -152 ] )
+testbot( pose [ -21.94 39.50 0 139 ] )
+testbot( pose [ -13.17 39.50 0 -117 ] )
+testbot( pose [ -4.39 39.50 0 -126 ] )
+testbot( pose [ 4.39 39.50 0 -87 ] )
+testbot( pose [ 13.17 39.50 0 177 ] )
+testbot( pose [ 21.94 39.50 0 148 ] )
+testbot( pose [ 30.72 39.50 0 156 ] )
+testbot( pose [ 39.50 39.50 0 -126 ] )
+
+

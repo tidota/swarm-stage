@@ -8,8 +8,9 @@ include "map.inc"
 include "sick.inc"
 
 interval_sim 20
-speedup 100
-paused 0
+speedup 1
+paused 1
+
 
 # time at which to pause (in GUI mode) or quit (in headless mode) the simulation
 #quit_time 3600 # 1 hour of simulated time
@@ -49,11 +50,7 @@ zone
   color "green"
   pose [ -7.000 -7.000 0 0 ]
   name "source"
-
-  ctrl "source 1" # argument is the local storage capacity
-
-  # will replace consumed flags every update, so call only occasionally
-  update_interval 10000 
+  ctrl "source 100 1"
 )
 
 zone
@@ -62,7 +59,6 @@ zone
   color "red"
   pose [ 7.000 7.000 0 0 ]
   name "sink"
- 
   ctrl "sink"
 )
 

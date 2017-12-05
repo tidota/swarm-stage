@@ -59,4 +59,7 @@ pioneer2dx
     alwayson 1
   )
 
+  # 160311 added by Tetsuya Idota
+  ctrl "wander"
+
 )
