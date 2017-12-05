@@ -19,9 +19,9 @@ sudo apt-get install git cmake g++ fltk1.1-dev libjpeg8-dev libpng12-dev libglu1
 ```
 mkdir stage
 cd stage
-git clone git@github.com:tidota/Swarm-Stage.git
+git clone git@github.com:tidota/swarm-stage.git
 export STG=$HOME/stg
-cmake -DCMAKE_INSTALL_PREFIX=$STG Swarm-Stage
+cmake -DCMAKE_INSTALL_PREFIX=$STG swarm-stage
 make
 make install
 ```
@@ -41,11 +41,11 @@ Then, on the terminal
 ## To Run It
 On the terminal,
 ```
-stage Swarm-Stage/worlds/<world file>
+stage swarm-stage/worlds/<world file>
 ```
 For example,
 ```
-stage Swarm-Stage/worlds/pathformdemo_05.world
+stage swarm-stage/worlds/pathformdemo_05.world
 ```
 This will run a simulation with 5 walking robots (with the start and goal robots).
 
