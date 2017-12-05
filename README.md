@@ -3,9 +3,9 @@
 This contains code to simulate swarming of multiple robots, which runs on Stage simulator.
 
 A very simple robot is designed to follow a set of rules to interact with the environment locally, and a group of robots engenders emergence of more compilated behaviors as a whole system.
-![single robot](./img/footbot_stage.png=300x)
-![local behavior](./img/footbots_stage.png=500x)
-![large swarm](./img/demo_stage_large2.png=500x)
+![single robot](./img/footbot_stage.png =300x)
+![local behavior](./img/footbots_stage.png =500x)
+![large swarm](./img/demo_stage_large2.png =500x)
 
 ## Dependencies
 The same as the original Stage does.
@@ -47,9 +47,9 @@ For example,
 stage Swarm-Stage/worlds/pathformdemo_05.world
 ```
 This will run a simulation with 5 walking robots (with the start and goal robots).
-![demo1_small](./img/demo_stage_ideal.png=500x)
-![demo2_small](./img/demo_stage_ideal2.png=500x)
-![demo3_small](./img/demo_stage_ideal3.png=500x)
+![demo1_small](./img/demo_stage_ideal.png =500x)
+![demo2_small](./img/demo_stage_ideal2.png =500x)
+![demo3_small](./img/demo_stage_ideal3.png =500x)
 
 ## System Diagram
 ![prog diagram](./img/prog_diagram.png)
