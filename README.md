@@ -1,8 +1,9 @@
 # Swarming of Multiple Robots on Stage
 
-This contains code to simulate swarming of multiple robots, which runs on Stage simulator.
+This contains code to simulate swarming of multiple robots, which runs on Stage simulator. A swarm of robots forms a path from the starting point to the destination in an unknown environment. The program is based on the algorithm proposed by Nouyan et al. ([Path formation in a robot swarm](https://link.springer.com/article/10.1007/s11721-007-0009-6)).
 
-A very simple robot is designed to follow a set of rules to interact with the environment locally, and a group of robots engenders emergence of more compilated behaviors as a whole system.
+
+An individual robot is designed to follow a set of rules to interact with the environment locally, and a group of robots engenders emergence of more compilated behaviors as a whole system.
 
 <img src="./img/footbot_stage.png" width="150"> <img src="./img/footbots_stage.png" width="300"> <img src="./img/demo_stage_large2.png" width="300">
 
@@ -34,7 +35,7 @@ export PATH=$PATH:$STG/bin
 ```
 Then, on the terminal
 ```
-. .bashrc
+. ~/.bashrc
 ```
 
 ## To Run It
@@ -51,7 +52,7 @@ This will run a simulation with 5 walking robots (with the start and goal robots
 <img src="./img/demo_stage_ideal.png" width="250"> <img src="./img/demo_stage_ideal2.png" width="250"> <img src="./img/demo_stage_ideal3.png" width="250">
 
 ## System Diagram
-The core code is designed to be used by other simulators like ARGoS.
+The core code is designed to be used by other simulators such as ARGoS.
 <img src="./img/prog_diagram.png" width="600">
 
 ________________________________________________________________
