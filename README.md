@@ -1,3 +1,63 @@
+# Swarming of Multiple Robots on Stage
+
+This contains code to simulate swarming of multiple robots, which runs on Stage simulator.
+
+A very simple robot is designed to follow a set of rules to interact with the environment locally, and a group of robots engenders emergence of more compilated behaviors as a whole system.
+![single robot](./img/footbot_stage.png)
+![local behavior](./img/footbots_stage.png)
+![large swarm](./img/demo_stage_large2.png)
+
+## Dependencies
+The same as the original Stage does.
+On my PC (Ubuntu 16.04), I installed the following.
+```
+sudo apt-get install git cmake g++ fltk1.1-dev libjpeg8-dev libpng12-dev libglu1-mesa-dev libltdl-dev
+```
+
+## Installation
+```
+mkdir stage
+cd stage
+git clone git@github.com:tidota/Swarm-Stage.git
+export STG=$HOME/stg
+cmake -DCMAKE_INSTALL_PREFIX=$STG Swarm-Stage
+make
+make install
+```
+## Environment Settings
+add these lines at the end in .bashrc
+```
+export STG=$HOME/stg
+export LD_LIBRARY_PATH=$STG/lib
+export PATH=$PATH:$STG/bin
+
+```
+Then, on the terminal
+```
+. .bashrc
+```
+
+## To Run It
+On the terminal,
+```
+stage Swarm-Stage/worlds/<world file>
+```
+For example,
+```
+stage Swarm-Stage/worlds/pathformdemo_05.world
+```
+This will run a simulation with 5 walking robots (with the start and goal robots).
+![demo_small](./img/demo_stage_ideal1.png)
+![demo_small](./img/demo_stage_ideal2.png)
+![demo_small](./img/demo_stage_ideal3.png)
+
+## System Diagram
+![prog diagram](./img/prog_diagram.png)
+
+________________________________________________________________
+The following below is the original README.md of Stage
+________________________________________________________________
+________________________________________________________________
 # The Stage Simulator
 This is the Stage README file, containing an introduction, license and citation information. Stage is a 2(.5)D robotics standalone simulator and can also be used as a C++ library to build your own simulation environment. Up-to-date **documentation can be found [here](https://codedocs.xyz/CodeFinder2/Stage/)**.
 
