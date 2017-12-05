@@ -29,7 +29,7 @@ make install
 add these lines at the end in .bashrc
 ```
 export STG=$HOME/stg
-export LD_LIBRARY_PATH=$STG/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$STG/lib
 export PATH=$PATH:$STG/bin
 
 ```
