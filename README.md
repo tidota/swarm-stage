@@ -4,10 +4,7 @@ This contains code to simulate swarming of multiple robots, which runs on Stage 
 
 A very simple robot is designed to follow a set of rules to interact with the environment locally, and a group of robots engenders emergence of more compilated behaviors as a whole system.
 
-<br>
-<img src="./img/footbot_stage.png" width="150">
-<img src="./img/footbots_stage.png" width="300">
-<img src="./img/demo_stage_large2.png" width="300">
+<img src="./img/footbot_stage.png" width="150"> <img src="./img/footbots_stage.png" width="300"> <img src="./img/demo_stage_large2.png" width="300">
 
 
 ## Dependencies
@@ -51,12 +48,11 @@ stage Swarm-Stage/worlds/pathformdemo_05.world
 ```
 This will run a simulation with 5 walking robots (with the start and goal robots).
 
-<img src="./img/demo_stage_ideal.png" width="250">
-<img src="./img/demo_stage_ideal2.png" width="250">
-<img src="./img/demo_stage_ideal3.png" width="250">
+<img src="./img/demo_stage_ideal.png" width="250"> <img src="./img/demo_stage_ideal2.png" width="250"> <img src="./img/demo_stage_ideal3.png" width="250">
 
 ## System Diagram
-<img src="./img/prog_diagram.png" width="500">
+The core code is designed to be used by other simulators like ARGoS.
+<img src="./img/prog_diagram.png" width="600">
 
 ________________________________________________________________
 ________________________________________________________________
