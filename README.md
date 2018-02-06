@@ -1,4 +1,5 @@
 # Swarming of Multiple Robots on Stage
+*The Argos version can be found [here](https://github.com/tidota/swarm-argos).
 
 This contains code to simulate swarming of multiple robots, which runs on [Stage simulator](https://github.com/rtv/Stage). A swarm of robots forms a path from the starting point to the destination in an unknown environment. The program is based on the algorithm proposed by Nouyan et al. ([Path formation in a robot swarm](https://link.springer.com/article/10.1007/s11721-007-0009-6)).
 
